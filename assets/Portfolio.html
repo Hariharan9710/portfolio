@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Hariharan V Portfolio</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <style>
+      .skills {
+  padding: 60px 0;
+  background: #f9f9f9;
+}
+
+.skills .section-title h2 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #37517e;
+  margin-bottom: 10px;
+}
+
+.skills .section-title p {
+  font-size: 15px;
+  color: #6c757d;
+  margin-bottom: 40px;
+}
+
+.skill {
+  font-weight: 600;
+  font-size: 16px;
+  color: #37517e;
+}
+
+.val {
+  font-weight: 600;
+  font-size: 16px;
+  color: #37517e;
+}
+
+/* Remove border-radius from progress bars */
+.progress {
+  background-color: #e9ecef !important;
+  border-radius: 0 !important;
+  height: 10px !important;
+}
+
+.progress-bar {
+  border-radius: 0 !important;
+}
+
+/* Custom color for 80% bar (PHP) */
+.progress-bar.bg-danger {
+  background-color: #ff6f61 !important; /* coral red */
+}
+        .features_area .feature_item {
+           min-height: 350px; /* increase height */
+  max-width: 250px;  /* reduce width */
+  margin: 0 auto 30px;
+          background-color: #f9f9fd;
+    background-size: cover;     
+    background-position: center;
+    background-repeat: no-repeat;
+  position: relative;
+  text-align: center;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  overflow: hidden;
+  z-index: 0;
+}
+.features_area .feature_item:nth-child(3) {
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+
+.features_area .feature_item:nth-child(3)::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(68, 88, 220, 0.7);
+  border-radius: 10px;
+  z-index: -1;
+  transition: background 0.3s ease;
+}
+
+.features_area .feature_item:nth-child(3) img {
+  filter: brightness(0) invert(1);
+  margin-bottom: 15px;
+  transition: filter 0.3s ease;
+}
+
+.features_area .feature_item:hover {
+  box-shadow: 0 15px 30px rgba(77, 87, 222, 0.7);
+  transform: translateY(-10px);
+  cursor: pointer;
+}
+
+.features_area .feature_item:nth-child(3):hover::before {
+  background: rgba(68, 88, 220, 0.85);
+}
+
+.features_area .feature_item:nth-child(3):hover img {
+  filter: brightness(1) invert(0);
+}
+.feature_item img {
+  max-width: 80px;
+  margin-bottom: 15px;
+}
+      .navbar-brand img {
+        height: 40px;
+      }
+      .navbar-nav .nav-link {
+        color: black;
+        transition: color 0.3s ease;
+      }
+
+      .navbar-nav .nav-link:hover,
+      .navbar-nav .nav-link.active {
+        color: #4458dc;
+      }
+
+      /* .home_banner_area {
+        background: #f8f9fa;
+        padding: 80px 0;
+      } */
+      .home_banner_area {
+  background: #f8f9fa;
+  min-height: 100vh;   /* full viewport height */
+  display: flex;       /* center content vertically */
+  align-items: center; /* vertical centering */
+  justify-content: center; /* horizontal centering if needed */
+  padding: 0;          /* remove extra padding */
+}
+
+      .banner_content h3,
+      .banner_content h1,
+      .banner_content h5 {
+        text-transform: uppercase;
+      }
+
+      .primary_btn {
+        background-color: #007bff;
+        color: white;
+        padding: 10px 25px;
+        border-radius: 30px;
+        text-decoration: none;
+        display: inline-block;
+        margin-right: 10px;
+        transition: background-color 0.3s ease;
+      }
+
+      .primary_btn:hover {
+        background-color: #0056b3;
+        color: white;
+        text-decoration: none;
+      }
+
+      .tr-bg {
+        background-color: transparent;
+        border: 2px solid #007bff;
+        color: #007bff;
+      }
+
+      .tr-bg:hover {
+        background-color: #007bff;
+        color: white;
+      }
+
+      .about_area {
+        padding: 80px 0;
+      }
+
+      .main_title h2 {
+        font-weight: 700;
+        margin-bottom: 20px;
+        line-height: 1.2;
+      }
+
+      .features_area {
+        padding: 80px 0;
+      }
+
+      .feature_item {
+        text-align: center;
+        padding: 20px;
+        border-radius: 10px;
+        transition: box-shadow 0.3s ease;
+        background: white;
+        margin-bottom: 30px;
+      }
+
+      .feature_item:hover {
+        box-shadow: 0 0 15px rgb(0 0 0 / 0.1);
+      }
+
+      .feature_item img {
+        max-width: 80px;
+        margin-bottom: 15px;
+      }
+
+      .portfolio_area {
+        padding: 80px 0;
+      }
+
+      .portfolio_box {
+        margin-bottom: 30px;
+        border-radius: 10px;
+        overflow: hidden;
+       box-shadow: 0px 15px 30px rgba(77, 87, 222, 0.3);
+    background: #fff;
+        transition: transform 0.3s ease;
+      }
+
+      .portfolio_box:hover {
+        transform: translateY(-10px);
+      }
+
+      .portfolio_box img {
+        width: 100%;
+        display: block;
+      }
+
+      .short_info {
+        padding: 15px;
+      }
+
+      .newsletter_area {
+        background: #007bff;
+        color: white;
+        padding: 60px 0;
+        text-align: center;
+      }
+
+      .subscription_box h2 {
+        font-weight: 700;
+        margin-bottom: 15px;
+        text-transform: uppercase;
+      }
+
+      .subscription_box p {
+        margin-bottom: 30px;
+      }
+
+      .subscription_box input[type="email"] {
+        max-width: 400px;
+        width: 100%;
+        padding: 10px 15px;
+        border-radius: 30px 0 0 30px;
+        border: none;
+        outline: none;
+      }
+
+      .subscription_box button {
+        border-radius: 0 30px 30px 0;
+        border: none;
+        padding: 10px 25px;
+        background: #0056b3;
+        color: white;
+        font-weight: 600;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      .subscription_box button:hover {
+        background: #003d80;
+      }
+
+      .footer_area {
+        background: #343a40;
+        color: white;
+        padding: 40px 0;
+        text-align: center;
+      }
+
+      .footer_logo img {
+        height: 40px;
+        margin-bottom: 15px;
+      }
+
+      .footer_social a {
+        color: white;
+        margin: 0 10px;
+        font-size: 20px;
+        transition: color 0.3s ease;
+      }
+
+      .footer_social a:hover {
+        color: #007bff;
+      }
+
+      .footer_bottom p {
+        margin: 0;
+        font-size: 14px;
+        color: #adb5bd;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header_area">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#home">
+        <img src="home-right.png" alt="Logo" />
+      </a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+    <section class="home_banner_area" id="home">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-7">
+            <div class="banner_content">
+              <h3>Hell0</h3>
+              <h1>I am Hariharan V</h1>
+              <h5>software developer</h5>
+              <div class="mt-4">
+                <a href="#" class="primary_btn">Hire Me</a>
+                <a href="#" class="primary_btn tr-bg">Get CV</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-5 text-center">
+            <img src="home-right.png" alt="Banner Image" class="img-fluid" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="about_area" id="about">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-5">
+            <img src="about-us.png" alt="About Me" class="img-fluid" />
+          </div>
+          <div class="col-lg-6 offset-lg-1">
+            <div class="main_title text-start">
+              <h2>let’s <br />Introduce about <br />myself</h2>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero
+                alias iure expedita inventore sit suscipit magnam quos explicabo
+                at voluptatum.
+              </p>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore,
+                nobis suscipit! Veritatis et temporibus, aliquam accusamus in
+                corporis impedit voluptate modi voluptas accusantium cupiditate.
+              </p>
+              <a href="#" class="primary_btn">Download CV</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Area -->
+    <section class="features_area" id="services">
+      <div class="container">
+        <div class="row justify-content-center mb-5">
+          <div class="col-lg-8 text-center">
+            <div class="main_title">
+              <h2>service offers</h2>
+              <p>
+                Is give may shall likeness made yielding spirit a itself togeth
+                created after sea <br />
+                is in beast beginning signs open god you're gathering ithe
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="row g-4">
+          <div class="col-lg-3 col-md-6">
+            <div class="feature_item">
+              <img src="s1.png" alt="WP Developing" />
+              <h4>Wp developing</h4>
+              <p>
+                Creeping for female light years that lesser can't evening heaven
+                isn't bearing tree
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <div class="feature_item">
+              <img src="s2.png" alt="UI/UX Design" />
+              <h4>UI/ux design</h4>
+              <p>
+                Creeping for female light years that lesser can't evening heaven
+                isn't bearing tree
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <div class="feature_item">
+              <img src="s3.png" alt="Web Design" />
+              <h4>Web design</h4>
+              <p>
+                Creeping for female light years that lesser can't evening heaven
+                isn't bearing tree
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <div class="feature_item">
+              <img src="s4.png" alt="SEO Optimize" />
+              <h4>seo optimize</h4>
+              <p>
+                Creeping for female light years that lesser can't evening heaven
+                isn't bearing tree
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+<section id="skills" class="skills section">
+
+  <div class="container section-title text-center">
+    <h2>Skills</h2>
+    <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+  </div>
+
+  <div class="container">
+
+    <div class="row skills-content">
+
+      <div class="col-lg-6">
+
+        <div class="mb-4">
+          <div class="d-flex justify-content-between">
+            <span class="skill">HTML</span>
+            <span class="val">100%</span>
+          </div>
+          <div class="progress" style="height: 10px;">
+            <div class="progress-bar bg-primary" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+        </div>
+
+        <div class="mb-4">
+          <div class="d-flex justify-content-between">
+            <span class="skill">CSS</span>
+            <span class="val">90%</span>
+          </div>
+          <div class="progress" style="height: 10px;">
+            <div class="progress-bar bg-primary" role="progressbar" style="width: 90%;" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+        </div>
+
+        <div class="mb-4">
+          <div class="d-flex justify-content-between">
+            <span class="skill">JavaScript</span>
+            <span class="val">75%</span>
+          </div>
+          <div class="progress" style="height: 10px;">
+            <div class="progress-bar bg-primary" role="progressbar" style="width: 75%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="col-lg-6">
+
+        <div class="mb-4">
+          <div class="d-flex justify-content-between">
+            <span class="skill">Java</span>
+            <span class="val">80%</span>
+          </div>
+          <div class="progress" style="height: 10px;">
+            <div class="progress-bar bg-danger" role="progressbar" style="width: 80%;" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+        </div>
+
+        <div class="mb-4">
+          <div class="d-flex justify-content-between">
+            <span class="skill">SpringBoot</span>
+            <span class="val">90%</span>
+          </div>
+          <div class="progress" style="height: 10px;">
+            <div class="progress-bar bg-primary" role="progressbar" style="width: 90%;" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+        </div>
+
+        <div class="mb-4">
+          <div class="d-flex justify-content-between">
+            <span class="skill">Angular </span>
+            <span class="val">55%</span>
+          </div>
+          <div class="progress" style="height: 10px;">
+            <div class="progress-bar bg-primary" role="progressbar" style="width: 55%;" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</section>
+
+    <!-- Portfolio Area -->
+    <section class="portfolio_area" id="portfolio">
+      <div class="container">
+        <div class="row mb-4">
+          <div class="col-lg-12">
+            <div class="main_title text-start">
+              <h2>quality work <br />Recently done project</h2>
+            </div>
+          </div>
+        </div>
+        <!-- Portfolio grid without filtering -->
+        <div class="row g-4 justify-content-center">
+          <!-- Portfolio items -->
+          <div class="col-lg-4 col-md-6">
+            <div class="portfolio_box">
+              <img src="p1.jpg" alt="minimal design" />
+              <div class="short_info p-3">
+                <h4><a href="#">Lorem ipsum dolor sit amet.</a></h4>
+                <p>Lorem ipsum dolor sit amet.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="portfolio_box">
+              <img src="p2.jpg" alt="Paint wall" />
+              <div class="short_info p-3">
+                <h4><a href="#">Lorem ipsum dolor sit amet.</a></h4>
+                <p>Lorem ipsum dolor sit amet.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="portfolio_box">
+              <img src="p3.jpg" alt="female light" />
+              <div class="short_info p-3">
+                <h4><a href="#">Lorem ipsum dolor sit amet.</a></h4>
+                <p>Lorem ipsum dolor sit amet.</p>
+              </div>
+            </div>
+          </div>
+          <!-- Newsletter Section -->
+          <section
+            class="newsletter_area d-flex align-items-center text-white" id="contact"
+            style="
+              background-image: url('subscribe-bg.png');
+              background-size: cover;
+              background-position: center;
+              height: 400px;
+              width: 100%;
+            "
+          >
+            <div class="container text-center">
+              <h2 class="text-uppercase fw-bold">Get Update From Anywhere</h2>
+              <p class="mb-4">
+                Bearing Void gathering light light his evening unto don't
+                afraid.
+              </p>
+
+              <!-- Subscription Form -->
+              <form class="row g-2 justify-content-center">
+                <div class="col-md-6 col-sm-12">
+                  <input
+                    type="email"
+                    class="form-control form-control-lg"
+                    placeholder="Email address"
+                    required
+                  />
+                </div>
+                <div class="col-md-3 col-sm-12">
+                  <button type="submit" class="btn btn-light btn-lg w-100">
+                    Get Started
+                  </button>
+                </div>
+              </form>
+            </div>
+          </section>
+          <!-- Footer Section -->
+          <footer class="footer_area py-5 bg-light">
+            <div class="container text-center">
+              <!-- Logo -->
+              <div class="footer_logo mb-3">
+                <h4 class="mt-3 dark">Follow Me</h4>
+              </div>
+
+              <!-- Social Icons -->
+              <div class="footer_social mb-4">
+                <a href="#" class="text-dark me-3"
+                  ><i class="fa fa-facebook fa-lg"></i
+                ></a>
+                <a href="#" class="text-dark me-3"
+                  ><i class="fa fa-twitter fa-lg"></i
+                ></a>
+                <a href="#" class="text-dark me-3"
+                  ><i class="fa fa-dribbble fa-lg"></i
+                ></a>
+                <a href="#" class="text-dark"
+                  ><i class="fa fa-behance fa-lg"></i
+                ></a>
+              </div>
+              <p class="footer-text small text-muted mb-0">
+                Copyright &copy;
+                <script>
+                  document.write(new Date().getFullYear());
+                </script>
+                All rights reserved | This template is made with
+                <i class="fa fa-heart-o text-danger" aria-hidden="true"></i>
+                by
+                <a
+                  href="https://colorlib.com"
+                  target="_blank"
+                  class="text-decoration-none"
+                  >Colorlib</a
+                >
+              </p>
+            </div>
+          </footer>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
+

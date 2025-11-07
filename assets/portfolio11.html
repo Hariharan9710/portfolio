@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Hariharan V Portfolio</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <style>
+      /* Navbar */
+      .navbar-brand img {
+        height: 40px;
+      }
+      .navbar-nav .nav-link {
+        color: black;
+        transition: color 0.3s;
+      }
+      .navbar-nav .nav-link:hover,
+      .navbar-nav .nav-link.active {
+        color: #4458dc;
+      }
+
+      /* Hero Section */
+      .home_banner_area {
+        height: 100vh; /* full viewport height */
+        display: flex;
+        align-items: center; /* centers left text vertically */
+        padding-top: 550px;
+        padding-bottom: 500px; /* add space so image doesn't hide behind navbar */
+      }
+
+      .banner_inner {
+        width: 100%;
+      }
+
+      .home_right_img {
+        height: calc(100vh - 70px); /* full viewport height minus navbar */
+        display: flex;
+        align-items: flex-end; /* push image to bottom */
+        justify-content: center; /* horizontally center */
+      }
+
+      .home_right_img img {
+        height: 100%; /* image fills the right column height */
+        width: auto; /* maintain aspect ratio */
+        object-fit: contain;
+      }
+
+      /* Buttons */
+      .primary_btn {
+        background-color: #007bff;
+        color: #fff;
+        padding: 10px 25px;
+        border-radius: 30px;
+        text-decoration: none;
+        display: inline-block;
+        margin-right: 10px;
+        transition: 0.3s;
+      }
+
+      .primary_btn:hover {
+        background-color: #0056b3;
+        color: #fff;
+      }
+
+      .tr-bg {
+        background: transparent;
+        border: 2px solid #007bff;
+        color: #007bff;
+      }
+
+      .tr-bg:hover {
+        background: #007bff;
+        color: #fff;
+      }
+      .banner_content {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start; /* text top-aligned */
+        margin-top: -150px; /* move text block a bit up */
+      }
+
+      .banner_content h3 {
+        font-size: 40px;
+        margin-bottom: 20px;
+        position: relative;
+      }
+
+      .banner_content h1 {
+        font-size: 70px;
+        line-height: 60px;
+        margin-bottom: 25px;
+      }
+
+      .banner_content h5 {
+        font-size: 24px;
+        margin-bottom: 35px;
+      }
+
+      /* Sections */
+      .about_area,
+      .features_area,
+      .portfolio_area {
+        padding: 80px 0;
+      }
+      .about_area .col-lg-5 img {
+        width: 120%; /* make it larger than its column */
+        max-width: none; /* allow it to exceed default limits */
+        height: auto; /* keep aspect ratio */
+        margin-left: -100px;
+      }
+
+      .features_area {
+        margin-top: 0; /* adjust this value as needed */
+      }
+      /* Features */
+      .features_area .main_title h2 {
+    font-size: 36px;          /* large, attention-grabbing */
+    font-weight: 700;         /* bold */
+    line-height: 50px;        /* spacing between lines */
+    margin-bottom: 15px;      /* space below heading */
+    text-transform: uppercase;/* all caps */
+    color: #222222;           /* dark color for contrast */
+    font-family: "Rubik", sans-serif; /* modern, clean font */
+}
+      .about_area .main_title p {
+    line-height: 26px;       /* space between lines */
+    font-size: 15px;         /* readable size */
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    color: #555555;          /* dark grey for readability */
+    margin-bottom: 60px;     /* small space after paragraph */
+}
+
+/* Services Section Paragraph */
+.features_area .main_title p {
+    line-height: 26px;
+    font-size: 15px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    color: #777777;          /* lighter grey than About */
+    margin-bottom: 100px;
+}
+      .features_area .feature_item {
+        min-height: 350px;
+        max-width: 250px;
+        margin: 0 auto 30px;
+        padding: 20px;
+        background: #f9f9fd;
+        border-radius: 10px;
+        text-align: center;
+        transition: 0.3s;
+        position: relative;
+        overflow: hidden;
+      }
+      
+      .about_area .main_title h2 {
+        margin-top: -150px;
+        font-size: 36px; /* Satner style */
+        font-weight: 700;
+        line-height: 50px;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+        color: #222222; /* dark color for title */
+        font-family: "Rubik", sans-serif; /* match Satner font */
+      }
+
+      .features_area .feature_item p {
+        margin-top: 20px;
+        line-height: 26px;
+    font-size: 15px;
+       color: #777777; /* Choose any color you like */
+       font-size: 14px; /* Optional: adjust size */
+        line-height: 22px; /* Optional: improve readability */
+}
+      .about_area .main_title p {
+        font-size: 15px; /* small readable size */
+        line-height: 25px; /* spacing between lines */
+        font-weight: 400;
+        font-family: "Roboto", sans-serif;
+        color: #777777; /* grey text like Satner */
+      }
+      .about_area .main_title .primary_btn {
+    margin-top: 30px; /* small gap if needed */
+}
+
+      .features_area .feature_item img {
+        max-width: 80px;
+        margin-bottom: 15px;
+      }
+      .features_area .feature_item:hover {
+        box-shadow: 0 15px 30px rgba(77, 87, 222, 0.7);
+        transform: translateY(-10px);
+        cursor: pointer;
+      }
+      .features_area .feature_item:nth-child(3) {
+        color: white;
+      }
+      .features_area .feature_item:nth-child(3)::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: rgba(68, 88, 220, 0.7);
+        border-radius: 10px;
+        z-index: -1;
+        transition: background 0.3s;
+      }
+      .features_area .feature_item:nth-child(3) img {
+        filter: brightness(0) invert(1);
+      }
+      .features_area .feature_item:nth-child(3):hover::before {
+        background: rgba(68, 88, 220, 0.85);
+      }
+      .features_area .feature_item:nth-child(3):hover img {
+        filter: brightness(1) invert(0);
+      }
+
+      /* Skills */
+      .skills {
+        padding: 60px 0;
+        background: #f9f9f9;
+      }
+      .skills .section-title h2 {
+        font-size: 32px;
+        font-weight: 700;
+        color: #37517e;
+      }
+      .skills .section-title p,
+      .skill,
+      .val {
+        color: #37517e;
+        font-weight: 600;
+      }
+      .progress {
+        background: #e9ecef !important;
+        border-radius: 0 !important;
+        height: 10px;
+      }
+      .progress-bar {
+        border-radius: 0 !important;
+      }
+      .progress-bar.bg-danger {
+        background-color: #ff6f61 !important;
+      }
+
+      /* Portfolio */
+      .portfolio_area .main_title h2 {
+        margin-top: 100px;
+        padding-bottom: 70px;
+    font-size: 36px;          /* same as service offers */
+    font-weight: 700;         /* bold */
+    line-height: 50px;        /* spacing between lines */
+    margin-bottom: 15px;      /* space below heading */
+    text-transform: uppercase;/* all caps */
+    color: #222222;           /* dark color for contrast */
+    font-family: "Rubik", sans-serif; /* same font as service heading */
+}
+      .portfolio_box {
+        margin-bottom: 30px;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0px 15px 30px rgba(77, 87, 222, 0.3);
+        background: #fff;
+        transition: transform 0.3s;
+      }
+      .portfolio_box:hover {
+        transform: translateY(-10px);
+      }
+
+      /* Newsletter */
+      .newsletter_area {
+        margin-bottom: 40px;
+        background-size: cover;
+        background-position: center;
+        height: 400px;
+        padding: 80px 0;
+      }
+
+      /* Footer */
+      .footer_area {
+        background: #f8f9fa;
+        color: #777777;
+        text-align: center;
+        padding: 40px 0 60px 0;
+      }
+      .footer_social a {
+        color: #777777;
+        margin: 0 10px;
+        font-size: 20px;
+        transition: color 0.3s;
+      }
+      .footer_social a:hover {
+        color: #007bff;
+      }
+      .footer_bottom p {
+        margin: 0;
+        font-size: 14px;
+        color: #777777;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <header>
+      <nav
+        class="navbar navbar-expand-lg navbar-light bg-light shadow-sm fixed-top"
+      >
+        <div class="container">
+          <a class="navbar-brand" href="#home"
+            ><img src="home-right.png" alt="Logo"
+          /></a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" href="#home">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#about">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#services">Services</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#portfolio">Portfolio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#contact">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Hero -->
+    <section class="home_banner_area" id="home">
+      <div class="banner_inner">
+        <div class="container">
+          <div class="row align-items-center">
+            <!-- Left Column (Text) -->
+            <div class="col-lg-7">
+              <div class="banner_content">
+                <h3 class="text-uppercase">Hello</h3>
+                <h1 class="text-uppercase">I am Hariharan V</h1>
+                <h5 class="text-uppercase">Software Developer</h5>
+                <div class="d-flex align-items-center mt-4">
+                  <a class="primary_btn" href="#contact"><span>Hire Me</span></a>
+                  <a class="primary_btn tr-bg" href="hari resume.pdf"><span>Get CV</span></a>
+                </div>
+              </div>
+            </div>
+            <!-- Right Column (Image) -->
+            <div class="col-lg-5">
+              <div class="home_right_img">
+                <img src="home-right.png" alt="Banner Image" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- About -->
+    <section class="about_area" id="about">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-5">
+            <img src="about-us.png" alt="About Me" class="img-fluid" />
+          </div>
+          <div class="col-lg-6 offset-lg-1">
+            <div class="main_title text-start">
+              <h2>
+                let’s <br />
+                Introduce about <br />
+                myself
+              </h2>
+              <p>
+I am a passionate Front-End Developer with a strong foundation in HTML, CSS, and JavaScript, 
+specializing in creating responsive and user-friendly web interfaces. I enjoy transforming ideas 
+into visually appealing designs and engaging user experiences, while continuously learning 
+new technologies to enhance my skills.
+</p>
+
+<p>
+With experience in React.js, Bootstrap, and modern web development tools, I aim to contribute 
+to dynamic projects that make an impact. I thrive in collaborative environments and am eager 
+to grow as part of a team of professionals.
+</p>
+              <!-- <p>Dolore, nobis suscipit! Veritatis et temporibus...</p> -->
+              <a href="hari resume.pdf" class="primary_btn">Download CV</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section class="features_area" id="services">
+      <div class="container text-center mb-5">
+        <div class="main_title">
+          <h2>SERVICE OFFERS</h2>
+         <p>
+Building responsive websites and interactive applications with HTML, CSS, JavaScript, and React <br>
+Creating backend solutions, REST APIs, and full-stack projects to deliver complete digital experiences
+</p>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-lg-3 col-md-6">
+            <div class="feature_item">
+              <img src="s1.png" alt="WP" />
+              <h4>Web Development</h4>
+              <p>Building responsive websites with clean HTML, CSS, and modern JS frameworks like React.</p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <div class="feature_item">
+              <img src="s2.png" alt="UI/UX" />
+              <h4>UI/UX Design</h4>
+              <p>Designing visually appealing and intuitive user interfaces for web and mobile applications.</p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <div class="feature_item">
+              <img src="s3.png" alt="Web" />
+              <h4>Backend Development</h4>
+              <p>Creating REST APIs and server-side logic using Node.js, Express.js and SpringBoot</p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <div class="feature_item">
+              <img src="s4.png" alt="SEO" />
+              <h4>Project Solutions</h4>
+              <p>Developing complete solutions like travel booking systems, traffic management systems, and more.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="skills text-center">
+      <div class="container section-title">
+        <h2>Skills</h2>
+        <p>Necessitatibus eius consequatur ex aliquid fuga...</p>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="mb-4">
+              <div class="d-flex justify-content-between">
+                <span>HTML</span><span>100%</span>
+              </div>
+              <div class="progress">
+                <div class="progress-bar bg-primary" style="width: 100%"></div>
+              </div>
+            </div>
+            <div class="mb-4">
+              <div class="d-flex justify-content-between">
+                <span>CSS</span><span>90%</span>
+              </div>
+              <div class="progress">
+                <div class="progress-bar bg-primary" style="width: 90%"></div>
+              </div>
+            </div>
+            <div class="mb-4">
+              <div class="d-flex justify-content-between">
+                <span>JavaScript</span><span>75%</span>
+              </div>
+              <div class="progress">
+                <div class="progress-bar bg-primary" style="width: 75%"></div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="mb-4">
+              <div class="d-flex justify-content-between">
+                <span>Java</span><span>80%</span>
+              </div>
+              <div class="progress">
+                <div class="progress-bar bg-danger" style="width: 80%"></div>
+              </div>
+            </div>
+            <div class="mb-4">
+              <div class="d-flex justify-content-between">
+                <span>SpringBoot</span><span>90%</span>
+              </div>
+              <div class="progress">
+                <div class="progress-bar bg-primary" style="width: 90%"></div>
+              </div>
+            </div>
+            <div class="mb-4">
+              <div class="d-flex justify-content-between">
+                <span>Angular</span><span>55%</span>
+              </div>
+              <div class="progress">
+                <div class="progress-bar bg-primary" style="width: 55%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Portfolio -->
+    <section class="portfolio_area" id="portfolio">
+      <div class="container">
+        <div class="main_title text-start mb-4">
+          <h2>Quality work<br />Recently done project</h2>
+        </div>
+        <div class="row g-4 justify-content-center">
+          <div class="col-lg-4 col-md-6">
+            <div class="portfolio_box">
+              <img src="p1.jpg" />
+              <div class="short_info p-3">
+                <h4><a href="#">Project 1</a></h4>
+                <p>Lorem ipsum</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="portfolio_box">
+              <img src="p2.jpg" />
+              <div class="short_info p-3">
+                <h4><a href="#">Project 2</a></h4>
+                <p>Lorem ipsum</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="portfolio_box">
+              <img src="p3.jpg" />
+              <div class="short_info p-3">
+                <h4><a href="#">Project 3</a></h4>
+                <p>Lorem ipsum</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section id="contact">
+      <div class="container">
+        <div
+          class="newsletter_area d-flex align-items-center text-white text-center"
+          style="
+            background-image: url('subscribe-bg.png');
+            background-size: cover;
+            background-position: center;
+            border-radius: 10px;
+            padding: 80px 20px;
+          "
+        >
+          <div class="w-100">
+            <h2 class="fw-bold text-uppercase">Get Update From Anywhere</h2>
+            <p class="mb-4">
+              Bearing Void gathering light light his evening unto don't afraid.
+            </p>
+            <form class="row g-2 justify-content-center">
+              <div class="col-md-6">
+                <input
+                  type="email"
+                  class="form-control form-control-lg"
+                  placeholder="Email address"
+                  required
+                />
+              </div>
+              <div class="col-md-3">
+                <button type="submit" class="btn btn-light btn-lg w-100">
+                  Get Started
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer_area">
+      <div class="container">
+        <h4 class="mb-3">Follow Me</h4>
+        <div class="footer_social mb-4">
+          <a href="#"><i class="fa fa-facebook fa-lg"></i></a>
+          <a href="#"><i class="fa fa-twitter fa-lg"></i></a>
+          <a href="#"><i class="fa fa-dribbble fa-lg"></i></a>
+          <a href="#"><i class="fa fa-behance fa-lg"></i></a>
+        </div>
+        <p class="footer-text small text-muted mb-0">
+          Copyright ©
+          <script>
+            document.write(new Date().getFullYear());
+          </script>
+          All rights reserved | Made with
+          <i class="fa fa-heart-o text-danger"></i> by
+          <a
+            href="#"
+            target="_blank"
+            class="text-decoration-none"
+            >Hariharan V</a
+          >
+        </p>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
