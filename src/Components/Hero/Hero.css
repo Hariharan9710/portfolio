@@ -1,0 +1,70 @@
+.home_banner_area {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  padding-top: 550px;
+  padding-bottom: 500px;
+}
+
+.banner_inner {
+  width: 100%;
+}
+
+.home_right_img {
+  height: calc(100vh - 70px);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.banner_content {
+  margin-top: -150px;
+}
+
+.banner_content h3 {
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+.banner_content h1 {
+  font-size: 70px;
+  line-height: 60px;
+  margin-bottom: 25px;
+}
+
+.banner_content h5 {
+  font-size: 24px;
+  margin-bottom: 35px;
+}
+
+.primary_btn {
+  color: #fff;
+  font-family: "Rubik", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 54px;
+  padding: 0 30px;
+  outline: none ;
+  text-align: center;
+  cursor: pointer;
+  text-transform: uppercase;
+  border-radius: 8px;
+  background-image: 
+    linear-gradient(to right, #4458dc 0%, #854fee 100%), 
+    radial-gradient(circle at top left, #4458dc, #854fee);
+  box-shadow: 0px 12px 35px rgba(118, 85, 225, 0.3);
+  transition: all 0.3s ease;
+  text-decoration: none;
+  margin-right: 15px;
+}
+
+.tr-bg {
+  background: transparent;
+  border: 2px solid #007bff;
+  color: #007bff;
+}
+
+.tr-bg:hover {
+  background: #007bff;
+  color: #fff;
+}

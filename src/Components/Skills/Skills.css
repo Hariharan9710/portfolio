@@ -1,0 +1,33 @@
+.skills {
+  margin-top: 200px;
+  padding: 60px 0;
+  background: #f9f9f9;
+}
+
+.skills .section-title h2 {
+  font-family: "Rubik", sans-serif;
+  margin-bottom: 20px;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 50px;
+  text-transform: uppercase;
+  color: #222222;
+}
+
+.skills .section-title p,
+.skill,
+.val {
+  margin-bottom: 30px;
+ color: #777777;
+  font-family: "Roboto", sans-serif;
+  font-weight: normal;
+}
+
+.progress {
+  background: #e9ecef ;
+  height: 10px;
+}
+
+/* .progress-bar.bg-danger {
+  background-color: #ff6f61 ;
+} */

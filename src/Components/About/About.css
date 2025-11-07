@@ -1,0 +1,30 @@
+
+.about_area .col-lg-5 img {
+  width: 115%;
+  max-width: none;
+ margin-left: -100px;
+}
+
+.about_area .main_title h2 {
+  margin-top: -70px;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 50px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  color: #222222;
+  font-family: "Rubik", sans-serif;
+}
+
+.about_area .main_title p {
+  font-size: 15px;
+  line-height: 25px;
+  font-weight: 400;
+  font-family: "Roboto", sans-serif;
+  color: #777777;
+  margin-bottom: 30px;
+}
+
+.about_area .main_title .primary_btn {
+  padding: 20px;
+}

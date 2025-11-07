@@ -1,0 +1,28 @@
+.footer_area {
+  background: #f8f9fa;
+  color: #777777;
+  text-align: center;
+  padding: 40px 0 60px 0;
+}
+.hello {
+   font-family: "Rubik", sans-serif;
+  padding-top: 125px;
+}
+
+.footer_social a {
+  color: #777777;
+  margin: 0 10px; 
+  font-size: 20px;
+  transition: color 0.3s;
+}
+
+.footer_social a:hover {
+  color: #007bff;
+}
+
+.footer_bottom p {
+
+  margin: 0;
+  font-size: 14px;
+  color: #777777;
+}
